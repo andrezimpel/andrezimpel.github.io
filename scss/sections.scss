@@ -1,0 +1,139 @@
+// basic styling of the sections
+header > section,
+main > section {
+  min-height: 140px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+// large partially fullscreen container
+.container-lg {
+  @extend .container;
+  max-width: 1600px;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+
+  .item {
+    float: left;
+    width: 50%;
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+  }
+}
+
+
+// add some extra padding to the first section because of the navbar
+main > section:first-child {
+  padding-top: 130px;
+}
+
+
+// about me section
+.about-me {
+  background-image: linear-gradient($red, $pink);
+  color: white;
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .list-social-media {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li, a {
+      display: inline-block;
+    }
+
+    a {
+      font-size: 26px;
+      padding: 5px;
+      margin: 10px 10px 0 10px;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// showcase
+.showcase {
+  padding: 0;
+  min-height: 0;
+}
+
+
+
+// projects
+.projects {
+  background-image: linear-gradient(#52edc7, darken(#52edc7, 15%));
+
+  h2 {
+    color: white;
+  }
+}
+
+
+
+// timeline
+.timeline {
+  background-image: linear-gradient(white, #efefef);
+}
+
+.timeline-wrapper {
+  padding-top: 40px;
+  padding-bottom: 1px;
+  position: relative;
+}
+.line {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  background-color: #5a90fe;
+}
+.timeline-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.timeline-content li {
+  font-size: 20px;
+  line-height: 26px;
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.timeline-title {
+  display: inline-block;
+  padding-right: 20px;
+  text-align: right;
+  width: 49%;
+}
+.timeline-date {
+  font-size: 14px;
+  display: inline-block;
+  padding-left: 20px;
+  text-align: left;
+  vertical-align: middle;
+  width: 49%;
+}
+.timeline-seperator {
+  background-color: rgba(90,144,254,0.2);
+  border-radius: 999px;
+  display: block;
+  height: 14px;
+  left: 50%;
+  margin-left: -7px;
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  width: 14px;
+}

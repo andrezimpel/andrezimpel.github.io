@@ -1,0 +1,10 @@
+{
+  "name": "andrezimpel",
+  "version": "0.0.1",
+  "main": "dist/css/design.css",
+  "dependencies": {
+    "bootstrap-sass": "latest",
+    "font-awesome": "latest",
+    "jquery": "latest"
+  }
+}

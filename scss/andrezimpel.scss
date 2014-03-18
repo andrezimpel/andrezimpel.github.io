@@ -1,0 +1,15 @@
+// import bootstrap & font awesome
+@import "../bower_components/bootstrap-sass/lib/bootstrap.scss";
+@import "../bower_components/font-awesome/scss/font-awesome.scss";
+
+// requirements
+@import "colors";
+
+// import basic layout
+@import "layout";
+@import "header";
+@import "sections";
+
+body {
+  background: #efefef;
+}
