@@ -4072,12 +4072,12 @@ button.close {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before, .timeline-content li:before, .clearfix:after, .timeline-content li:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
-.clearfix:after {
+.clearfix:after, .timeline-content li:after {
   clear: both; }
 
 .center-block {
@@ -5659,7 +5659,7 @@ th.hidden-lg, td.hidden-lg {
 .fa-plus-square-o:before {
   content: "\f196"; }
 
-.gradient-red, .about-me {
+.gradient-red {
   background-image: linear-gradient(#ff5e3a, #ff2a68); }
 
 .gradient-orange {
@@ -5719,6 +5719,9 @@ h3 {
 a {
   color: #444; }
 
+.fa {
+  font-size: 30px !important; }
+
 .lead {
   font-weight: 400; }
 
@@ -5740,8 +5743,8 @@ a {
 
 header > section, main > section, footer {
   min-height: 140px;
-  padding-top: 80px;
-  padding-bottom: 80px; }
+  padding-top: 60px;
+  padding-bottom: 60px; }
 
 .container-lg {
   max-width: 1600px;
@@ -5755,11 +5758,15 @@ header > section, main > section, footer {
       .container-lg .item {
         width: 100%; } }
 
-main > section:first-child {
-  padding-top: 130px; }
+header > section {
+  padding-top: 130px;
+  padding-bottom: 130px; }
 
 .about-me {
+  background-image: linear-gradient(#ffb0a0, #ff90b1);
   color: white; }
+  .about-me p {
+    margin: 40px 0; }
   .about-me a {
     color: white;
     text-decoration: underline; }
@@ -5772,11 +5779,48 @@ main > section:first-child {
   background: #52edc7; }
   .projects h2 {
     color: white; }
+  .projects h3 {
+    color: #638dc4; }
 
-.twitter #tweet .tweet-text {
-  margin-bottom: 40px; }
-.twitter a, .twitter i {
-  color: #55acee; }
+.twitter {
+  background: #55acee;
+  color: #0f619b; }
+  .twitter #tweet .tweet-text {
+    margin-bottom: 40px; }
+  .twitter a, .twitter i {
+    color: white; }
+
+.passion {
+  background-color: #222;
+  color: #444; }
+
+.soundcloud-player {
+  margin-bottom: 60px; }
+  @media (min-width: 768px) {
+    .soundcloud-player {
+      margin-bottom: 0; } }
+
+.instagram-recent-image a {
+  display: block; }
+  .instagram-recent-image a img {
+    width: 100%; }
+
+.soundcloud-player iframe, .instagram-recent-image {
+  box-shadow: 0 1px 10px #181818;
+  min-height: 300px;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .soundcloud-player iframe, .instagram-recent-image {
+      height: 345px;
+      width: 345px; } }
+  @media (min-width: 992px) {
+    .soundcloud-player iframe, .instagram-recent-image {
+      height: 455px;
+      width: 455px; } }
+  @media (min-width: 1200px) {
+    .soundcloud-player iframe, .instagram-recent-image {
+      height: 555px;
+      width: 555px; } }
 
 .timeline {
   background-image: linear-gradient(#ffffff, #efefef); }
@@ -5787,14 +5831,14 @@ main > section:first-child {
   position: relative; }
 
 .line {
+  background-color: #638dc4;
+  bottom: 0;
   display: block;
-  position: absolute;
   left: 50%;
+  position: absolute;
   margin-left: -1px;
   width: 2px;
-  top: 0;
-  bottom: 0;
-  background-color: #5a90fe; }
+  top: 0; }
 
 .timeline-content {
   list-style: none;
@@ -5809,21 +5853,21 @@ main > section:first-child {
   margin-bottom: 34px; }
 
 .timeline-title {
-  display: inline-block;
+  float: left;
   padding-right: 20px;
   text-align: right;
-  width: 49%; }
+  width: 50%; }
 
 .timeline-date {
   font-size: 14px;
-  display: inline-block;
+  float: left;
   padding-left: 20px;
   text-align: left;
   vertical-align: middle;
-  width: 49%; }
+  width: 50%; }
 
 .timeline-seperator {
-  background-color: rgba(90, 144, 254, 0.2);
+  background-color: rgba(85, 172, 238, 0.3);
   border-radius: 999px;
   display: block;
   height: 14px;
@@ -5855,6 +5899,3 @@ footer {
     padding: 5px;
     margin: 10px 10px 0 10px;
     text-decoration: none; }
-
-body {
-  background: #efefef; }

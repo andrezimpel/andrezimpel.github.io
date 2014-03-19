@@ -66,6 +66,7 @@ gulp.task('scripts', function() {
             './bower_components/bootstrap-sass/js/affix.js',
             './bower_components/twitter-text/twitter-text.js',
             './bower_components/momentjs/moment.js',
+            './bower_components/instafeed.js/instafeed.js',
             "./javascripts/main.js"
             ])
     // .pipe(uglify())

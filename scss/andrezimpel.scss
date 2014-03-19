@@ -5,11 +5,9 @@
 // requirements
 @import "colors";
 
+$primary: #fff;
+
 // import basic layout
 @import "layout";
 @import "header";
 @import "sections";
-
-body {
-  background: #efefef;
-}

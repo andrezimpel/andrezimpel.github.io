@@ -3,8 +3,8 @@ header > section,
 main > section,
 footer {
   min-height: 140px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 // large partially fullscreen container
 .container-lg {
@@ -26,22 +26,32 @@ footer {
 
 
 // add some extra padding to the first section because of the navbar
-main > section:first-child {
+header > section {
   padding-top: 130px;
+  padding-bottom: 130px;
 }
+
+
 
 
 // about me section
 .about-me {
-  @extend .gradient-red;
+  background-image: linear-gradient(lighten(#ff5e3a, 20%), lighten(#ff2a68, 20%));
 
   color: white;
+
+  p {
+    margin: 40px 0;
+  }
 
   a {
     color: white;
     text-decoration: underline;
   }
 }
+
+
+
 
 
 // showcase
@@ -52,12 +62,20 @@ main > section:first-child {
 
 
 
+
+
+
 // projects
 .projects {
   background: #52edc7;
 
+
   h2 {
     color: white;
+  }
+
+  h3 {
+    color: darken(#88A8D2, 10%);
   }
 }
 
@@ -65,6 +83,9 @@ main > section:first-child {
 
 // twitter
 .twitter {
+  background: #55acee;
+  color: darken(#55acee, 30%);
+
   #tweet {
     .tweet-text {
       margin-bottom: 40px;
@@ -72,7 +93,47 @@ main > section:first-child {
   }
 
   a, i {
-    color: #55acee;
+    color: white;
+  }
+}
+
+// passion
+.passion {
+  background-color: #222;
+  color: #444;
+}
+.soundcloud-player {
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 0;
+  }
+}
+.instagram-recent-image a {
+  display: block;
+
+  img {
+    width: 100%;
+  }
+}
+.soundcloud-player iframe,
+.instagram-recent-image {
+  box-shadow: 0 1px 10px #181818;
+  min-height: 300px;
+  width: 100%;
+
+  @media (min-width: $screen-sm) {
+    height: 345px;
+    width: 345px;
+  }
+
+  @media (min-width: $screen-md) {
+    height: 455px;
+    width: 455px;
+  }
+  @media (min-width: $screen-lg) {
+    height: 555px;
+    width: 555px;
   }
 }
 
@@ -88,14 +149,14 @@ main > section:first-child {
   position: relative;
 }
 .line {
+  background-color: darken(#88A8D2, 10%);
+  bottom: 0;
   display: block;
-  position: absolute;
   left: 50%;
+  position: absolute;
   margin-left: -1px;
   width: 2px;
   top: 0;
-  bottom: 0;
-  background-color: #5a90fe;
 }
 .timeline-content {
   list-style: none;
@@ -104,6 +165,8 @@ main > section:first-child {
   text-align: center;
 }
 .timeline-content li {
+  @extend .clearfix;
+
   font-size: 20px;
   line-height: 26px;
   position: relative;
@@ -111,21 +174,21 @@ main > section:first-child {
 }
 
 .timeline-title {
-  display: inline-block;
+  float: left;
   padding-right: 20px;
   text-align: right;
-  width: 49%;
+  width: 50%;
 }
 .timeline-date {
   font-size: 14px;
-  display: inline-block;
+  float: left;
   padding-left: 20px;
   text-align: left;
   vertical-align: middle;
-  width: 49%;
+  width: 50%;
 }
 .timeline-seperator {
-  background-color: rgba(90,144,254,0.2);
+  background-color: rgba(#55acee, 0.3);
   border-radius: 999px;
   display: block;
   height: 14px;
