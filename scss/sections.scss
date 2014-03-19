@@ -1,6 +1,7 @@
 // basic styling of the sections
 header > section,
-main > section {
+main > section,
+footer {
   min-height: 140px;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -32,29 +33,13 @@ main > section:first-child {
 
 // about me section
 .about-me {
-  background-image: linear-gradient($red, $pink);
+  @extend .gradient-red;
+
   color: white;
 
   a {
     color: white;
     text-decoration: underline;
-  }
-
-  .list-social-media {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li, a {
-      display: inline-block;
-    }
-
-    a {
-      font-size: 26px;
-      padding: 5px;
-      margin: 10px 10px 0 10px;
-      text-decoration: none;
-    }
   }
 }
 
@@ -69,7 +54,7 @@ main > section:first-child {
 
 // projects
 .projects {
-  background-image: linear-gradient(#52edc7, darken(#52edc7, 15%));
+  background: #52edc7;
 
   h2 {
     color: white;
@@ -150,4 +135,51 @@ main > section:first-child {
   top: 50%;
   margin-top: -7px;
   width: 14px;
+}
+
+
+
+
+footer {
+  background: #28292d;
+  min-height: 0;
+
+  .lead {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  a {
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.list-social-media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li, a {
+    display: inline-block;
+  }
+
+  a {
+    font-size: 26px;
+    padding: 5px;
+    margin: 10px 10px 0 10px;
+    text-decoration: none;
+  }
 }
