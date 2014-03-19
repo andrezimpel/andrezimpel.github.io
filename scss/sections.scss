@@ -1,0 +1,248 @@
+// basic styling of the sections
+header > section,
+main > section,
+footer {
+  min-height: 140px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+// large partially fullscreen container
+.container-lg {
+  @extend .container;
+  max-width: 1600px;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+
+  .item {
+    float: left;
+    width: 50%;
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+  }
+}
+
+
+// add some extra padding to the first section because of the navbar
+header > section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+
+
+
+// about me section
+.about-me {
+  background-image: linear-gradient(lighten(#ff5e3a, 20%), lighten(#ff2a68, 20%));
+
+  color: white;
+
+  p {
+    margin: 40px 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
+// showcase
+.showcase {
+  padding: 0;
+  min-height: 0;
+}
+
+
+
+
+
+
+// projects
+.projects {
+  background: #52edc7;
+
+
+  h2 {
+    color: white;
+  }
+
+  h3 {
+    color: darken(#88A8D2, 10%);
+  }
+}
+
+
+
+// twitter
+.twitter {
+  background: #55acee;
+  color: darken(#55acee, 30%);
+
+  #tweet {
+    .tweet-text {
+      margin-bottom: 40px;
+    }
+  }
+
+  a, i {
+    color: white;
+  }
+}
+
+// passion
+.passion {
+  background-color: #222;
+  color: #444;
+}
+.soundcloud-player {
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 0;
+  }
+}
+.instagram-recent-image a {
+  display: block;
+
+  img {
+    width: 100%;
+  }
+}
+.soundcloud-player iframe,
+.instagram-recent-image {
+  box-shadow: 0 1px 10px #181818;
+  min-height: 300px;
+  width: 100%;
+
+  @media (min-width: $screen-sm) {
+    height: 345px;
+    width: 345px;
+  }
+
+  @media (min-width: $screen-md) {
+    height: 455px;
+    width: 455px;
+  }
+  @media (min-width: $screen-lg) {
+    height: 555px;
+    width: 555px;
+  }
+}
+
+
+// timeline
+.timeline {
+  background-image: linear-gradient(white, #efefef);
+}
+
+.timeline-wrapper {
+  padding-top: 40px;
+  padding-bottom: 1px;
+  position: relative;
+}
+.line {
+  background-color: darken(#88A8D2, 10%);
+  bottom: 0;
+  display: block;
+  left: 50%;
+  position: absolute;
+  margin-left: -1px;
+  width: 2px;
+  top: 0;
+}
+.timeline-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.timeline-content li {
+  @extend .clearfix;
+
+  font-size: 20px;
+  line-height: 26px;
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.timeline-title {
+  float: left;
+  padding-right: 20px;
+  text-align: right;
+  width: 50%;
+}
+.timeline-date {
+  font-size: 14px;
+  float: left;
+  padding-left: 20px;
+  text-align: left;
+  vertical-align: middle;
+  width: 50%;
+}
+.timeline-seperator {
+  background-color: rgba(#55acee, 0.3);
+  border-radius: 999px;
+  display: block;
+  height: 14px;
+  left: 50%;
+  margin-left: -7px;
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  width: 14px;
+}
+
+
+
+
+footer {
+  background: #28292d;
+  min-height: 0;
+
+  .lead {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  a {
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.list-social-media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li, a {
+    display: inline-block;
+  }
+
+  a {
+    font-size: 26px;
+    padding: 5px;
+    margin: 10px 10px 0 10px;
+    text-decoration: none;
+  }
+}
