@@ -5761,6 +5761,10 @@ header > section, main > section, footer {
 header > section {
   padding-top: 130px;
   padding-bottom: 130px; }
+  @media (max-width: 768px) {
+    header > section {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
 
 .about-me {
   background-image: linear-gradient(#ffb0a0, #ff90b1);
@@ -5887,6 +5891,10 @@ footer {
     margin-bottom: 0; }
   footer a:hover {
     color: white; }
+  @media (max-width: 768px) {
+    footer {
+      padding-top: 20px;
+      padding-bottom: 30px; } }
 
 .list-social-media {
   list-style: none;
