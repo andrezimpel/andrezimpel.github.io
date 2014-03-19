@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 
 // paths
 var paths = {
-  scripts: ['js/**/*.js'],
+  scripts: ['javascripts/**/*.js'],
   images: 'img/**/*',
   sass: "scss/**/*.scss",
   html: "index.html",
@@ -64,6 +64,8 @@ gulp.task('scripts', function() {
             './bower_components/bootstrap-sass/js/scrollspy.js',
             './bower_components/bootstrap-sass/js/tab.js',
             './bower_components/bootstrap-sass/js/affix.js',
+            './bower_components/twitter-text/twitter-text.js',
+            './bower_components/momentjs/moment.js',
             "./javascripts/main.js"
             ])
     // .pipe(uglify())

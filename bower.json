@@ -5,6 +5,8 @@
   "dependencies": {
     "bootstrap-sass": "latest",
     "font-awesome": "latest",
-    "jquery": "latest"
+    "jquery": "latest",
+    "twitter-text": "latest",
+    "momentjs": "latest"
   }
 }

@@ -5785,6 +5785,11 @@ main > section:first-child {
   .projects h2 {
     color: white; }
 
+.twitter #tweet .tweet-text {
+  margin-bottom: 40px; }
+.twitter a, .twitter i {
+  color: #55acee; }
+
 .timeline {
   background-image: linear-gradient(#ffffff, #efefef); }
 

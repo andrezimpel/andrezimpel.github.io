@@ -78,6 +78,20 @@ main > section:first-child {
 
 
 
+// twitter
+.twitter {
+  #tweet {
+    .tweet-text {
+      margin-bottom: 40px;
+    }
+  }
+
+  a, i {
+    color: #55acee;
+  }
+}
+
+
 // timeline
 .timeline {
   background-image: linear-gradient(white, #efefef);
