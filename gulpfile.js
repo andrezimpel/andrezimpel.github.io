@@ -69,7 +69,7 @@ gulp.task('scripts', function() {
             './bower_components/instafeed.js/instafeed.js',
             "./javascripts/main.js"
             ])
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(concat('andrezimpel.min.js'))
     .pipe(gulp.dest('./dist/js'));
 });
