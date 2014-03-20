@@ -44,6 +44,7 @@ $(document).ready(function(){
     success: function(data) {
       recent = data.data[0];
       image = recent.images.standard_resolution.url;
+      caption = recent.caption.text;
 
       // set the image
       $container = $("#instagram-recent-image");
@@ -53,6 +54,9 @@ $(document).ready(function(){
       $(".instagram-recent-image").find("a").attr("href", recent.link);
 
       $("a").attr('target', '_blank');
+
+      $caption = $("#instagram-recent-caption");
+      $caption.html(caption);
     },
     error: function(jqXHR, textStatus, errorThrown) {
         $("#log").val($("#log").val() + 'Error\n');

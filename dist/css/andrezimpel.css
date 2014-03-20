@@ -5805,9 +5805,19 @@ header > section {
       margin-bottom: 0; } }
 
 .instagram-recent-image a {
-  display: block; }
+  color: white;
+  display: block;
+  position: relative; }
   .instagram-recent-image a img {
     width: 100%; }
+  .instagram-recent-image a .instagram-recent-caption {
+    background: rgba(34, 34, 34, 0.4);
+    bottom: 0;
+    color: white;
+    left: 0;
+    padding: 10px 10px;
+    position: absolute;
+    right: 0; }
 
 .soundcloud-player iframe, .instagram-recent-image {
   box-shadow: 0 1px 10px #181818;

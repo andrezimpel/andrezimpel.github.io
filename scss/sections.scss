@@ -115,10 +115,22 @@ header > section {
   }
 }
 .instagram-recent-image a {
+  color: white;
   display: block;
+  position: relative;
 
   img {
     width: 100%;
+  }
+
+  .instagram-recent-caption {
+    background: rgba(#222, 0.4);
+    bottom: 0;
+    color: white;
+    left: 0;
+    padding: 10px 10px;
+    position: absolute;
+    right: 0;
   }
 }
 .soundcloud-player iframe,
