@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+  // welcome
+  console.log("Hi, there. Stop sniffin that code!");
+
   // links
   $("a").attr('target', '_blank');
 
