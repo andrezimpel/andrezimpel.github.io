@@ -5811,7 +5811,7 @@ header > section {
 
 .soundcloud-player iframe, .instagram-recent-image {
   box-shadow: 0 1px 10px #181818;
-  min-height: 300px;
+  min-height: 280px;
   width: 100%; }
   @media (min-width: 768px) {
     .soundcloud-player iframe, .instagram-recent-image {
