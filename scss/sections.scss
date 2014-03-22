@@ -106,6 +106,10 @@ header > section {
 .passion {
   background-color: #222;
   color: #444;
+
+  a:hover {
+    color: white;
+  }
 }
 .soundcloud-player {
   margin-bottom: 60px;
