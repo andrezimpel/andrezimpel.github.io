@@ -14,7 +14,9 @@
     "gulp-watch": "latest",
     "gulp-uglify": "latest",
     "gulp-sass": "latest",
-    "gulp-concat": "latest"
+    "gulp-concat": "latest",
+    "gulp-cleanhtml": "latest",
+    "gulp-minify-css": "latest"
   },
   "engineStrict": true,
   "engines": {

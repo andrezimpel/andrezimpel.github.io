@@ -4,7 +4,29 @@ body {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale
+  -moz-osx-font-smoothing: grayscale;
+
+  // disable user select
+  -webkit-user-select: text;  /* Chrome all / Safari all */
+  -moz-user-select: text;     /* Firefox all */
+  -ms-user-select: text;      /* IE 10+ */
+
+  /* No support for these yet, use at own risk */
+  -o-user-select: text;
+  user-select: text;
+}
+
+*::selection {
+  background: rgba(#fff, 0.2);
+  color: white;
+}
+*::-moz-selection {
+  background: rgba(#fff, 0.2);
+  color: white;
+}
+*::-webkit-selection {
+  background: rgba(#fff, 0.2);
+  color: white;
 }
 
 // headlines

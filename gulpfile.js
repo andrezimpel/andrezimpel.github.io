@@ -3,7 +3,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
-    path = require('path');
+    path = require('path'),
+    cleanhtml = require('gulp-cleanhtml'),
+    minifyCSS = require('gulp-minify-css');
 
 
 // ------------------------------------------
@@ -14,7 +16,7 @@ var paths = {
   scripts: ['javascripts/**/*.js'],
   images: 'img/**/*',
   sass: "scss/**/*.scss",
-  html: "index.html",
+  html: "content/index.html",
   public_dist: "dist/**/*.*"
 };
 
@@ -25,17 +27,24 @@ var paths = {
 // Retrun the task when a file changes
 gulp.task('watch', function () {
   gulp.watch(paths.scripts, ['scripts']);
+  gulp.watch(paths.images, ['images']);
   gulp.watch(paths.sass, ['sass']);
-  gulp.watch(paths.html, ['html']);
+  gulp.watch(paths.html, ['html_dev', "html_prod"]);
   gulp.watch(paths.public_dist, ['public_dist']);
 });
 
 
 
 // copy index to /public for developing with pow
-gulp.task('html', function () {
+gulp.task('html_dev', function () {
   gulp.src(paths.html)
+    .pipe(cleanhtml())
     .pipe(gulp.dest('./public/'));
+});
+gulp.task('html_prod', function () {
+  gulp.src(paths.html)
+    .pipe(cleanhtml())
+    .pipe(gulp.dest('./'));
 });
 
 
@@ -44,6 +53,9 @@ gulp.task('html', function () {
 gulp.task('sass', function () {
   gulp.src('./scss/andrezimpel.scss')
     .pipe(sass())
+    .pipe(minifyCSS({
+      removeEmpty: true
+    }))
     .pipe(gulp.dest('./dist/css'));
 });
 
@@ -74,7 +86,11 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-
+// images
+gulp.task('images', function () {
+  gulp.src(paths.images)
+    .pipe(gulp.dest('./dist/img'));
+});
 
 // copy files from dist to public dist as they change
 gulp.task('public_dist', function () {
@@ -86,4 +102,4 @@ gulp.task('public_dist', function () {
 
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['sass','html','public_dist', 'scripts', 'watch']);
+gulp.task('default', ['sass', 'images', 'html_dev', 'html_prod', 'public_dist', 'scripts', 'watch']);
