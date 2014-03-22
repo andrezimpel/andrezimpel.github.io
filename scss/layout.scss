@@ -92,9 +92,16 @@ a {
 .label {
   background: none;
   border: 1px solid white;
-  // display: inline-block;
   font-size: 60%;
   padding: 0.1em 0.6em;
-  // margin-top: 2px;
-  // vertical-align: top;
+}
+
+.tooltip-inner {
+  background: rgba(#000, 0.8);
+  color: white;
+  font-weight: 500;
+  padding: 0.4em 0.6em;
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: rgba(#000, 0.8);
 }

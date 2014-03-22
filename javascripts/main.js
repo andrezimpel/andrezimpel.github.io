@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  // enable tooltips
+  $("[data-toggle='tooltip']").tooltip();
+
   // welcome
   console.log("Hi, there. Stop sniffin that code!");
 
