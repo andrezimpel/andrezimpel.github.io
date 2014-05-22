@@ -127,14 +127,33 @@ header > section {
     width: 100%;
   }
 
-  .instagram-recent-caption {
+  .instagram-recent-info {
     background: rgba(#222, 0.4);
     bottom: 0;
     color: white;
     left: 0;
-    padding: 10px 10px;
+    padding: 10px 20px;
     position: absolute;
     right: 0;
+    text-align: left;
+
+    i {
+      font-size: 14px !important;
+
+      &.fa-comment {
+        display: inline-block;
+        margin-top: 4px;
+        vertical-align: top;
+      }
+    }
+
+    .instagram-recent-likes,
+    .instagram-recent-comments {
+      float: right;
+      font-size: 14px;
+      line-height: 25px;
+      margin-left: 10px;
+    }
   }
 }
 .soundcloud-player iframe,

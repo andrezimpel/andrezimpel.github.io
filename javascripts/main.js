@@ -48,9 +48,15 @@ $(document).ready(function(){
       recent = data.data[0];
       image = recent.images.standard_resolution.url;
       caption = recent.caption.text;
+      likes = recent.likes.count;
+      comments = recent.comments.count;
+
+      console.log(likes);
+      console.log(comments);
 
       // set the image
       $container = $("#instagram-recent-image");
+      $instagraminfo = $("#instagram-recent-info");
       $container.attr("src", image);
 
       // set the anchor
@@ -60,6 +66,18 @@ $(document).ready(function(){
 
       $caption = $("#instagram-recent-caption");
       $caption.html(caption);
+
+      // add likes if there are more than 1
+      $comments = '<span id="instagram-recent-comments" class="instagram-recent-comments"><i class="fa fa-comment"></i> ' + comments + '</span>';
+      if(comments >= 1){
+        $instagraminfo.append($comments);
+      }
+      
+      // add likes if there are more than 5
+      $likes = '<span id="instagram-recent-likes" class="instagram-recent-likes"><i class="fa fa-heart"></i> ' + likes + '</span>';
+      if(likes >= 5){
+        $instagraminfo.append($likes);
+      }
     },
     error: function(jqXHR, textStatus, errorThrown) {
         $("#log").val($("#log").val() + 'Error\n');
