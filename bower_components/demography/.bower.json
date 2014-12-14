@@ -1,0 +1,44 @@
+{
+  "name": "demography",
+  "homepage": "https://github.com/andrezimpel/demography",
+  "authors": [
+    "Andre Zimpel <az@yum.de>"
+  ],
+  "description": "demography is a small script to add browser data to the body",
+  "main": "dist/js/demography.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "browser",
+    "classes",
+    "versions",
+    "css",
+    "design"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.9.0",
+    "bowser": "~0.7.1"
+  },
+  "engines": {
+    "node": ">= 0.9"
+  },
+  "_release": "e346e1dfc2",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e346e1dfc28b90a848bcf5e8608c165ac8ec42e2"
+  },
+  "_source": "git://github.com/andrezimpel/demography.git",
+  "_target": "*",
+  "_originalSource": "demography",
+  "_direct": true
+}
